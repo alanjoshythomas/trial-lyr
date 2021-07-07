@@ -26,7 +26,7 @@ async def on_ready():
 
 @client.command(aliases=['hi','hello','Hello','hey','Hey'])
 async def Hi(ctx):
-    await ctx.channel.send("Hey,what's up!")
+    await ctx.channel.send("Hey, what's up!")
 
 
 '''@client.event
