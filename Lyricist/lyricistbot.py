@@ -275,20 +275,17 @@ async def ping(ctx):
 async def help(ctx):
     embed= discord.Embed(
         title = 'Lyricist command list',
-        description = 'Here you can find a list of commands you can use.',
+        description = 'Here you can find a list of commands you can use.\n',
         colour = discord.Colour.random() 
     )
-    embed.add_field(name='1',value='`$help`: Use this command to get help about how to use the bot.',inline = False)
-    embed.add_field(name='2',value='`$info`: Use this command to get basic info of the bot.',inline = False)
-    embed.add_field(name='3',value='`$lyr`: Use this command to get lyrics of songs.(used as `$lyr` artist_name ~ song_name[ex: `$lyr` Coldplay ~ Viva la Vida])',inline = False)
-    embed.add_field(name='4',value="`$sng`: Use this command to get lyrics of songs.(used as `$sng` song_name[ex: $sng Demons]) .Use `$lyr` if the specified song can't be found])",inline = False)
-    embed.add_field(name='5',value="`$quiz`: Use this command for a quiz. Follow the commands given religiously",inline = False)
-    embed.add_field(name='6',value="`$art`: Use this command to start the quiz.(used as `$art` artist_name[ex: `$art` Imagine Dragons])", inline = False)
-    embed.add_field(name='7',value="`$ans`: Use this command to give input for the asnwer of the quiz.(used as `$ans` song_name ~ artist_name[ex: `$ans` Believer ~ Imagine Dragons])", inline = False)
-    embed.add_field(name='8',value="`$quotes`: Use this command to generate a lyrical quote.(used as `$quote`)", inline= False)
-    embed.add_field(name='9',value="`$invite`: Use this command to get the link to invite this bot to your server.(used as `$invite`)", inline= False)
-    embed.add_field(name='10',value="`$ping`: Use this command to check the host server's latency.(used as `$ping`)", inline= False)
-    embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/858669942160883724/862036601411862538/iu.png')
+    embed.add_field(name='1',value='`.help`: Use this command to get help about how to use the bot.\n',inline = False)
+    embed.add_field(name='2',value="`.sng`: Use this command to get lyrics of songs (used as `.sng` song_name [ex: .sng Demons] ). Use `.lyr` if the specified song can't be found])\n",inline = False)
+    embed.add_field(name='3',value='`.spt` : Use this command to get the lyrics of the song playing on your spotify\n', inline = False)
+    embed.add_field(name='4',value='`.lyr`: Use this command to get lyrics of songs (used as `.lyr` artist_name ~ song_name [ex: `.lyr` Coldplay ~ Viva la Vida])\n',inline = False)    
+    embed.add_field(name='5',value="`.art`: Use this command to guess the song of the artist/band mentioned after this command (used as `.art` artist_name [ex: `.art` Imagine Dragons])\n", inline = False)
+    embed.add_field(name='6',value="`.quotes`: Use this command to generate a lyrical quote (used as `.quote`)\n", inline= False)
+    embed.add_field(name='7',value="`.invite`: Use this command to get the link to invite this bot to your server (used as `.invite`)\n", inline= False)
+    embed.add_field(name='8',value="`.ping`: Use this command to check the host server's latency (used as `.ping`)\n", inline= False)
 
     await ctx.channel.send(embed=embed)
 
